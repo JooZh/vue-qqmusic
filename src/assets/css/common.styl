@@ -1,0 +1,60 @@
+@import './mxin.styl'
+
+// 1px边框
+.border-half-top
+  &:before
+    position absolute
+    content ' '
+    height 1px
+    background $boderColor
+    transform scaleY(0.5)
+    width 100%
+    top 0
+    left 0
+    right 0
+.border-half-bottom
+  &:after
+    position absolute
+    content ' '
+    height 1px
+    background $boderColor
+    transform scaleY(0.5)
+    width 100%
+    bottom 0
+    left 0
+    right 0
+.border-half-left
+  &::after
+    position absolute
+    content ' '
+    width: 1px
+    background $boderColor
+    transform scaleX(0.5)
+    height 100%
+    bottom 0
+    left 0
+    right 0
+.border-half-left
+  &::before
+    position absolute
+    content ' '
+    width: 1px
+    background $boderColor
+    transform scaleX(0.5)
+    height 100%
+    bottom 0
+    left 0
+    right 0
+
+// 单行文字省略号
+.text-line
+  .pix
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
